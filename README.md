@@ -1,8 +1,8 @@
-# Building a Local Agent Base with Firefly LlamaPi
+# Building a Local Agent Base with LlamaPi
 
 ## What Is LlamaPi?
 
-LlamaPi is a large-model deployment and management tool developed by the Firefly AI team. It is designed for edge devices with large-model inference capabilities, helping users deploy and manage open-source models locally and provide inference to third-party applications through OpenAI-compatible APIs.
+LlamaPi is a large-model deployment and management tool. It is designed for edge devices with large-model inference capabilities, helping users deploy and manage open-source models locally and provide inference to third-party applications through OpenAI-compatible APIs.
 
 LlamaPi lowers the barrier to deploying large models on edge devices. It shortens the workflow from obtaining a model and adapting it to the hardware to running the model, providing a lightweight foundation for offline and private AI applications.
 
