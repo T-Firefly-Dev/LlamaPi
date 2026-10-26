@@ -1,5 +1,9 @@
 # LlamaPi 本地 Agent 底座搭建实战
 
+> **验证版本：v0.3.2**。
+> 
+> 最新版本与问题反馈见[论坛 LlamaPi 板块](https://forum.t-firefly.com/c/eco-software/llamapi)。
+
 ## 什么是 LlamaPi？
 
 LlamaPi（读作"拉马派"）是大模型部署与管理工具，面向具备大模型推理能力的边缘设备，帮助用户在本地部署和管理开源大模型，并通过 OpenAI 兼容 API 为第三方应用提供推理能力。
@@ -366,6 +370,10 @@ curl -s http://127.0.0.1:9265/v1/chat/completions \
 `finish_reason: "tool_calls"` + 结构完整的 `tool_calls`，意味着 **agentic loop 的返回通道是通的**：Agent 发工具定义 → 模型生成调用 → Agent 执行 → 用 `role: "tool"` 回灌结果 → 继续下一轮。这是编程 Agent 的工作循环。
 
 一个小细节：`tool_choice` 字段会被服务端解析但当前不生效。OpenCode 这类框架不依赖它做硬性约束，所以不影响使用；但如果是自研客户端想做强制工具调用，需要靠 prompt 而非 `tool_choice` 来约束。
+
+## 交流与反馈
+
+部署中遇到问题，或对模型适配、功能有需求，欢迎到[论坛 LlamaPi 板块](https://forum.t-firefly.com/c/eco-software/llamapi)提问或反馈。
 
 ## 参考资料
 

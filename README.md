@@ -1,5 +1,9 @@
 # Building a Local Agent Base with LlamaPi
 
+> **Verified version: v0.3.2**.
+> 
+> For the latest version and issue feedback, ask in the [LlamaPi category on the Firefly forum](https://forum.t-firefly.com/c/eco-software/llamapi).
+
 ## What Is LlamaPi?
 
 LlamaPi is a large-model deployment and management tool. It is designed for edge devices with large-model inference capabilities, helping users deploy and manage open-source models locally and provide inference to third-party applications through OpenAI-compatible APIs.
@@ -368,6 +372,10 @@ curl -s http://127.0.0.1:9265/v1/chat/completions \
 `finish_reason: "tool_calls"` together with a well-formed `tool_calls` array means **the return channel of the agentic loop works**: the agent sends tool definitions → the model generates a call → the agent executes it → the result is fed back with `role: "tool"` → the next round begins. This is the working loop of a coding agent.
 
 One small detail: the `tool_choice` field is parsed by the server but is not currently effective. Frameworks such as OpenCode do not rely on it for hard constraints, so this does not affect usage; but a custom client that wants to force a tool call must constrain it through the prompt rather than through `tool_choice`.
+
+## Forum and Feedback
+
+If you hit an issue during deployment, or have a request about model support or features, post in the [LlamaPi category on the Firefly forum](https://forum.t-firefly.com/c/eco-software/llamapi).
 
 ## References
 
